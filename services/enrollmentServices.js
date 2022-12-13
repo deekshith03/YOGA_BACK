@@ -37,6 +37,16 @@ const updatePayment = async (email, enrolledMonth) => {
     }
   );
 };
+
+const findEnrollments = async (email) => {
+  return await Enrollment.findAll({
+    where: {
+      email: email,
+      paymentStatus: false,
+    },
+  });
+};
 exports.insertEnrollment = insertEnrollment;
 exports.getStatus = getStatus;
 exports.updatePayment = updatePayment;
+exports.findEnrollments = findEnrollments;

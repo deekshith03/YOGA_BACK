@@ -22,7 +22,7 @@ if (process.env.NODE_ENV == "DEV") {
   sequelize
     .sync()
     .then(() => {
-      addBatches(batchData);
+      // addBatches(batchData);
     })
     .catch((err) => {
       console.log("Failed to sync db: " + err.message);

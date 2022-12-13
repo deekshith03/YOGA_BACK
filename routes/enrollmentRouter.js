@@ -3,6 +3,7 @@ const {
   newEnrollment,
   checkStatus,
   makePayment,
+  getUserEnrollment,
 } = require("../controllers/enrollmentController");
 const enrollmentRouter = Router();
 
@@ -29,4 +30,13 @@ enrollmentRouter.post("/makepayment", async (req, res, next) => {
     res.status(400).json({ errors: err });
   }
 });
+
+enrollmentRouter.get("/getenrollments/:email_id", async (req, res, next) => {
+  try {
+    await getUserEnrollment(req, res, next);
+  } catch (err) {
+    res.status(400).json({ errors: err });
+  }
+});
+
 module.exports = enrollmentRouter;

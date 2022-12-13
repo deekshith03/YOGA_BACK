@@ -2,6 +2,7 @@ const {
   insertEnrollment,
   getStatus,
   updatePayment,
+  findEnrollments,
 } = require("../services/enrollmentServices");
 
 const newEnrollment = async (req, res) => {
@@ -23,4 +24,9 @@ const makePayment = async (req, res) => {
   res.status(200).send(await updatePayment(email, enrolledMonth));
 };
 
-module.exports = { newEnrollment, checkStatus, makePayment };
+const getUserEnrollment = async (req, res) => {
+  const email = req.params.email_id;
+  res.status(200).send(await findEnrollments(email));
+};
+
+module.exports = { newEnrollment, checkStatus, makePayment, getUserEnrollment };

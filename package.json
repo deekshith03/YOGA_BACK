@@ -1,0 +1,25 @@
+{
+  "name": "yoga_back",
+  "version": "1.0.0",
+  "description": "Yoga backend",
+  "main": "server.js",
+  "scripts": {
+    "start:dev": "nodemon ./bin/www",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.2",
+    "sequelize": "^6.26.0",
+    "sqlite3": "^5.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

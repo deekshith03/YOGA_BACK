@@ -20,7 +20,7 @@ if (process.env.NODE_ENV == "DEV") {
     });
 } else {
   sequelize
-    .sync({ force: true })
+    .sync()
     .then(() => {
       addBatches(batchData);
     })

@@ -4,15 +4,15 @@ const cors = require("cors");
 const userRouter = require("./routes/userRouter");
 const batchRouter = require("./routes/batchRouter");
 const enrollmentRouter = require("./routes/enrollmentRouter");
-const { addBatches } = require("./services/batchesServices");
 const app = express();
 const sequelize = require("./models/index");
-const batchData = require("./batchData");
 
 if (process.env.NODE_ENV == "DEV") {
   sequelize
     .sync()
-    .then(() => {})
+    .then(() => {
+      console.log("succesfully synced");
+    })
     .catch((err) => {
       console.log("Failed to sync db: " + err.message);
     });
@@ -20,7 +20,7 @@ if (process.env.NODE_ENV == "DEV") {
   sequelize
     .sync()
     .then(() => {
-      addBatches(batchData);
+      console.log("succesfully synced");
     })
     .catch((err) => {
       console.log("Failed to sync db: " + err.message);

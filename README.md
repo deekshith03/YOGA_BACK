@@ -44,3 +44,5 @@ here the enrollmentId acts as the primary key where as both email and bacth Id a
 <h3>PS : Please try to click login or register two three times backend being a free service it takes time to wake up </h3>
 <p>Live demo: <a href="https://iridescent-kringle-652db9.netlify.app/">click here</a></p>
 <p>FrontEnd Repo Link <a href="https://github.com/deekshith03/YOGA_FRONT">Repo Link</a></p>
+
+#NOTE DB IS NOT PERSISTENT BEING A FREE SERVICE USERS DATA WILL BE DELETED AFTER SOME TIME

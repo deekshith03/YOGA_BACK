@@ -11,9 +11,8 @@ const batchData = require("./batchData");
 
 if (process.env.NODE_ENV == "DEV") {
   sequelize
-    .sync({ force: true })
+    .sync()
     .then(() => {
-      addBatches(batchData);
     })
     .catch((err) => {
       console.log("Failed to sync db: " + err.message);
